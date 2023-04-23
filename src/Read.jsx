@@ -6,7 +6,7 @@ function Read() {
     const {id} = useParams();
     const [student, setStudent] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3001/read/'+id)
+        axios.get('http://127.0.0.1:3001/read/'+id)
         .then(res => {
             console.log(res)
             setStudent(res.data[0]);
