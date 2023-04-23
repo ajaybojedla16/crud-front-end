@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Home() {
     const [data, setData] = useState([])
     useEffect(()=> {
-        axios.get("http://101.53.132.31/:3001/")
+        axios.get("http://101.53.132.31:3001/")
         .then(res => setData(res.data))
         .catch(err => console.log(err))
     }, [])
