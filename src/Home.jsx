@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 function Home() {
     const [data, setData] = useState([])
     useEffect(()=> {
-        axios.get("http://172.16.161.164:3001/")
+        axios.get("http://101.53.132.31/:3001/")
         .then(res => setData(res.data))
         .catch(err => console.log(err))
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete('http://172.16.161.164:3001/delete/'+id)
+        axios.delete('http://101.53.132.31:3001/delete/'+id)
         .then(res => {
             window.location.reload()
         })

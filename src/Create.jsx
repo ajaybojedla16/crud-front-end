@@ -10,7 +10,7 @@ function Create() {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://172.16.163.123:3001/student', values)
+        axios.post('http://101.53.132.31:3001/student', values)
         .then(res => {
             console.log(res);
             navigate('/')
