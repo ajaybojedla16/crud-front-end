@@ -8,7 +8,7 @@ function Update() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:8085/read/'+id)
+        axios.get('http://localhost:3001/read/'+id)
         .then(res => {
             console.log(res)
             setValues({...values, name: res.data[0].name, email: res.data[0].email})
@@ -21,7 +21,7 @@ function Update() {
     })
     const handleUpdate = (event) => {
         event.preventDefault();
-        axios.put('http://localhost:8085/update/'+id, values)
+        axios.put('http://localhost:3001/update/'+id, values)
         .then(res => {
             console.log(res)
             navigate('/')
